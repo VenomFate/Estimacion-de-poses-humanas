@@ -1,0 +1,10 @@
+version: '3'
+services:
+  pose-detection:
+    build: .
+    devices:
+      - "/dev/video0:/dev/video0"
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
